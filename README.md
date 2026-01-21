@@ -4,44 +4,33 @@
 
 ## 🚀 Quick Start (Bootstrap)
 
-To turn **any** project folder into a RAL workspace, simply copy and paste the following prompt into your AI Agent Main Chat:
+To turn **any** project folder into a RAL workspace, simply copy and paste the following prompt into your AI Agent Main Chat (Gemini CLI, OpenCode, Claude Code):
 
 ---
 
 ### 📋 The Bootstrap Prompt
 
 ```markdown
-I want to initialize this workspace for **Ralph Agentic Loops (RAL)**. 
+I want to install and initialize the **Ralph Agentic Loop (RAL)** skill in this workspace.
 
 Please perform the following autonomous setup:
 
-1.  **Adopt the Protocol**: Read the following rules and adopt them as your System Instructions for this task:
-    > **RAL Protocol**:
-    > 1. You check `progress.md` at the start of every turn.
-    > 2. You execute exactly one step of work.
-    > 3. You update `progress.md` with the results (Pass/Fail) at the end of every turn.
-    > 4. You never proceed if the previous step failed—you fix it first.
+1.  **Install the Skill**:
+    -   Clone the RAL repository: `git clone https://github.com/sxa101/ral.git .agent/skills/ral`
+    -   (If `.agent/skills` does not exist, create it first).
 
-2.  **Initialize State**:
-    Create a file named `progress.md` with this content:
-    """
-    # Ralph Loop Progress Tracker
-    **Goal**: [INSERT USER GOAL HERE]
-    **Status**: IN_PROGRESS
-    
-    ## Recent Activity
-    | Iteration | Action Taken | Result |
-    | :--- | :--- | :--- |
-    | 0 | Initialization | Setup RAL. |
-    
-    ## Checklist
-    - [ ] [First Step]
-    """
+2.  **Adopt the Protocol**:
+    -   Read the file `.agent/skills/ral/RAL_PROTOCOL.md`.
+    -   Adopt its rules as your **System Instructions** for this session.
 
-3.  **Start Generation**:
-    Once the file is created, immediately read it, determining the Goal from me (prompt me if needed), and then execute the first step in the Checklist.
+3.  **Initialize State**:
+    -   Create a file named `progress.md` (copy from `.agent/skills/ral/templates/progress.md` if available, or create fresh).
+    -   Set the Goal in `progress.md` to: [INSERT USER GOAL HERE]
+
+4.  **Start Generation**:
+    -   Immediately execute the first step defined in your new protocol.
 ```
 
 ---
 
-That's it. The agent will now create its own harness and begin looping through the tasks defined in `progress.md`.
+That's it. The agent will fetch the latest protocol from GitHub, install it locally, and begin looping.
