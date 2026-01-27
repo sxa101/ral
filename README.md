@@ -24,13 +24,14 @@ Please perform the following autonomous setup:
     -   Adopt its rules as your **System Instructions** for this session.
 
 3.  **Initialize State**:
-    -   Create a file named `progress.md` (copy from `.agent/skills/ral/templates/progress.md` if available, or create fresh).
+    -   Create a file named `progress.md` (copy from `.agent/skills/ral/templates/progress.md`).
     -   Set the Goal in `progress.md` to: [INSERT USER GOAL HERE]
+    -   **CRITICAL**: Ensure the Status is set to `DESIGN_PHASE` and the `## Design Consensus` section is present.
 
 4.  **Start Generation**:
-    -   Immediately execute the first step defined in your new protocol.
+    -   Immediately execute the first step defined in your new protocol (System Design Review).
 ```
 
 ---
 
-That's it. The agent will fetch the latest protocol from GitHub, install it locally, and begin looping.
+That's it. The agent will fetch the latest protocol from GitHub, install it locally, and begin the **Design Quorum** phase.

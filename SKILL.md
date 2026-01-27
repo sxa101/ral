@@ -1,6 +1,6 @@
 ---
 name: Ralph Agentic Loops (RAL)
-description: A protocol-based Agent Harness for purely agentic, autonomous iteration without external scripts.
+description: A protocol-based Agent Harness for purely agentic, autonomous iteration with mandatory Initial Design Quorum.
 ---
 
 # Ralph Agentic Loops (RAL)
@@ -11,14 +11,13 @@ description: A protocol-based Agent Harness for purely agentic, autonomous itera
 
 Instead of running a python or bash script, you **inject the Protocol** into the agent's context. The agent then follows a strict lifecycle:
 
-1.  **Read Progress**: The agent checks `progress.md`.
-2.  **Execute Step**: The agent performs *one* unit of work.
-3.  **Update Progress**: The agent records its state.
-4.  **Loop**: The agent requests the next prompt.
+1.  **Design Quorum**: The agent acts as an Expert Architect to critically review the plan (max 3 iterations).
+2.  **Execution Loop**: Once designed, the agent executes the plan one step at a time.
+3.  **State Persistence**: The agent records its state in `progress.md` after every step.
 
 ## The Protocol
 
-The core of this skill is the `RAL_PROTOCOL.md` file, which serves as the "System Prompt" for the loop. It instructs the agent to value **State** over **Speed**.
+The core of this skill is the `RAL_PROTOCOL.md` file, which serves as the "System Prompt" for the loop. It instructs the agent to value **State** over **Speed** and **Design** over **Code**.
 
 ## Best Practices
 
