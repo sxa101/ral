@@ -25,12 +25,23 @@ For every interaction, perform this sequence:
         *   If the design is solid, APPROVE it.
         *   **Limit**: If Iteration > 2, you MUST forcefully conclude the Design Phase and move to `IN_PROGRESS`.
     *   **PHASE 2: Execution** (Status: `IN_PROGRESS`)
+        *   **TDD Enforcement**: You MUST follow a Test-Driven Development approach:
+            1.  **Red**: Write a failing test for the next piece of logic.
+            2.  **Green**: Write the minimum code to make the test pass.
+            3.  **Refactor**: Clean up the code while keeping tests passing.
         *   If `BLOCKED`: Analyze the blocker.
         *   Otherwise: Pick the next item from the "Completion Checklist".
-        *   If `COMPLETE`: Stop.
+        *   Once all items are checked: Move to `QA_REVIEW`.
+    *   **PHASE 3: QA Review** (Status: `QA_REVIEW`)
+        *   Adopt the Persona: **Senior QA Engineer**.
+        *   Critically review the entire implementation and test suite.
+        *   If issues are found, REJECT in `progress.md` and move status back to `IN_PROGRESS`.
+        *   If the implementation is robust, APPROVE.
+        *   **Limit**: Max 3 iterations. All critical feedback MUST be addressed before setting status to `COMPLETE`.
 3.  **EXECUTE**: Perform the necessary code edits, commands, or research.
 4.  **UPDATE STATE**: Write to `progress.md`:
     *   Update `Design Consensus` (if in Phase 1).
+    *   Update `QA Review` (if in Phase 3).
     *   Update `Recent Activity` with what you just did.
     *   Update `Current Context` with the result.
     *   Check off completed items in the Checklist.

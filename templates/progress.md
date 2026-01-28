@@ -8,6 +8,11 @@
 | :--- | :--- | :--- | :--- |
 | 0 | Initializer | Pending | Initial Design ready for review. |
 
+## QA Review (3 Iterations Max)
+| Iteration | Critic Role | Outcome (Approve/Reject) | Key Feedback |
+| :--- | :--- | :--- | :--- |
+| 0 | QA Engine | Pending | Waiting for implementation. |
+
 ## Recent Activity
 | Iteration | Action Taken | Result |
 | :--- | :--- | :--- |
@@ -21,7 +26,9 @@
 ## Completion Checklist
 - [ ] Design Approved (Quorum Reached)
 - [ ] Task Breakdown Created
-- [ ] Implementation Started
+- [ ] Implementation (TDD) Started
+- [ ] Implementation (TDD) Finished
+- [ ] QA Review Passed
 - [ ] Verification Passed
 
-<!-- Valid Statuses: DESIGN_PHASE, IN_PROGRESS, BLOCKED, COMPLETE -->
+<!-- Valid Statuses: DESIGN_PHASE, IN_PROGRESS, BLOCKED, QA_REVIEW, COMPLETE -->
